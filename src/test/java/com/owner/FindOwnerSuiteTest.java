@@ -62,7 +62,7 @@ public class FindOwnerSuiteTest {
 					cap = DesiredCapabilities.chrome();
 					cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
 					//driver = new RemoteWebDriver(new URL("http://127.0.0.1:5454/wd/hub"),cap);
-					driver = new RemoteWebDriver(new URL("http://192.168.46.38:5454/wd/hub"), capabilities);
+					driver = new RemoteWebDriver(new URL("http://192.168.46.38:5454/wd/hub"), cap);
 					
 					
 					
