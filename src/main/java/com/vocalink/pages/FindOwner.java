@@ -36,7 +36,7 @@ public class FindOwner {
 			
 			
 			//Clicking on find owners menu
-			wait.until(ExpectedConditions.elementToBeclickable(By.xpath("//a[@title='find owners']")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@title='find owners']")));
 			//driver.findElement(By.xpath("//a[@title='find owners']")).click();
 			WebElement element = driver.findElement(By.xpath("//a[@title='find owners']"));
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
