@@ -70,6 +70,7 @@ public class FindOwnerSuiteTest {
 				log.info("Browser has been launched");
 				
 				driver.get(PropertyFile.read_testdata("URL"));
+				driver.manage().window().maximize();
 				
 			}
 			
