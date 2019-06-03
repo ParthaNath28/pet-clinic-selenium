@@ -37,7 +37,7 @@ public class FindOwner {
 			
 			//Clicking on find owners menu
 			wait.until(ExpectedConditions.elementToBeclickable(By.xpath("//a[@title='find owners']")));
-			driver.findElement(By.xpath("//a[@title='find owners']")).click();
+			//driver.findElement(By.xpath("//a[@title='find owners']")).click();
 			WebElement element = driver.findElement(By.xpath("//a[@title='find owners']"));
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
 			executor.executeScript("arguments[0].click();", element);
@@ -46,7 +46,10 @@ public class FindOwner {
 			
 			//Clicking on Add button
 			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Owner")));
-			driver.findElement(By.linkText("Add Owner")).click();
+			//driver.findElement(By.linkText("Add Owner")).click();
+			WebElement element = driver.findElement(By.linkText("Add Owner"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
 			log.info("Clicked on Add Owner Button");
 			
 			Thread.sleep(5000);
