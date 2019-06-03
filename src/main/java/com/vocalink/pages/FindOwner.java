@@ -36,14 +36,16 @@ public class FindOwner {
 			
 			
 			//Clicking on find owners menu
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//A[@href='/owners/find']")));
+			wait.until(ExpectedConditions.elementToBeclickable(By.xpath("//a[@title='find owners']")));
 			driver.findElement(By.xpath("//a[@title='find owners']")).click();
+			WebElement element = driver.findElement(By.xpath("//a[@title='find owners']"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
 			log.info("Clicked on Find Owner menu");
-			
 			Thread.sleep(5000);
 			
 			//Clicking on Add button
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/owners/new']")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Owner")));
 			driver.findElement(By.linkText("Add Owner")).click();
 			log.info("Clicked on Add Owner Button");
 			
@@ -109,7 +111,7 @@ public class FindOwner {
        	WebDriverWait wait = new WebDriverWait(driver, 70L);
 		
 		//Clicking on find owners menu
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//A[@href='/owners/find']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@title='find owners']")));
 		driver.findElement(By.xpath("//a[@title='find owners']")).click();
 		log.info("Clicked on Find Owner menu");
 		
