@@ -50,7 +50,7 @@ public class FindOwner {
 			wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Owner")));
 			//driver.findElement(By.linkText("Add Owner")).click();
 			//WebElement element = driver.findElement(By.linkText("Add Owner"));
-			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			//JavascriptExecutor executor = (JavascriptExecutor)driver;
 			executor.executeScript("arguments[0].click();", driver.findElement(By.linkText("Add Owner")));
 			log.info("Clicked on Add Owner Button");
 			
