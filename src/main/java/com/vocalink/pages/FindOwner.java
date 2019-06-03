@@ -37,14 +37,14 @@ public class FindOwner {
 			
 			//Clicking on find owners menu
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//A[@href='/owners/find']")));
-			driver.findElement(By.xpath("//A[@href='/owners/find']")).click();
+			driver.findElement(By.xpath("//a[@title='find owners']")).click();
 			log.info("Clicked on Find Owner menu");
 			
 			Thread.sleep(5000);
 			
 			//Clicking on Add button
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/owners/new']")));
-			driver.findElement(By.xpath("//a[@href='/owners/new']")).click();
+			driver.findElement(By.linkText("Add Owner")).click();
 			log.info("Clicked on Add Owner Button");
 			
 			Thread.sleep(5000);
@@ -110,7 +110,7 @@ public class FindOwner {
 		
 		//Clicking on find owners menu
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//A[@href='/owners/find']")));
-		driver.findElement(By.xpath("//A[@href='/owners/find']")).click();
+		driver.findElement(By.xpath("//a[@title='find owners']")).click();
 		log.info("Clicked on Find Owner menu");
 		
 		Thread.sleep(5000);
