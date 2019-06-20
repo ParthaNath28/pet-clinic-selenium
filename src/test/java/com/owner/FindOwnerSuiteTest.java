@@ -49,9 +49,9 @@ public class FindOwnerSuiteTest {
 				}else if(sBrowser.equalsIgnoreCase("Chrome"))
 				{
 					log.info("Chrome Browser");
-					System.setProperty("webdriver.chrome.driver","C:/Users/Manohar/Desktop/Selenium/chromedriver.exe");
+					//System.setProperty("webdriver.chrome.driver","C:/Users/Manohar/Desktop/Selenium/chromedriver.exe");
 					
-				         driver= new ChromeDriver();
+				        // driver= new ChromeDriver();
 					/*System.setProperty("webdriver.chrome.driver",
 				            "/usr/bin/chromedriver");
 					ChromeOptions options = new ChromeOptions();
@@ -59,11 +59,11 @@ public class FindOwnerSuiteTest {
 			        options.addArguments("--disable-dev-shm-usage");
 					driver=new ChromeDriver(options);*/
 					
-					//DesiredCapabilities cap = DesiredCapabilities.chrome();
-					//cap = DesiredCapabilities.chrome();
-					//cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+					DesiredCapabilities cap = DesiredCapabilities.chrome();
+					cap = DesiredCapabilities.chrome();
+					cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
 					//driver = new RemoteWebDriver(new URL("http://127.0.0.1:5454/wd/hub"),cap);
-					//driver = new RemoteWebDriver(new URL("http://192.168.0.153:5454/wd/hub"), cap);
+					driver = new RemoteWebDriver(new URL("http://192.168.0.153:5454/wd/hub"), cap);
 					
 					
 					
